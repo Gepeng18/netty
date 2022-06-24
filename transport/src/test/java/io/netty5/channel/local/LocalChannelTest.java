@@ -223,8 +223,7 @@ public class LocalChannelTest {
                 // the ClosedChannelException has been created by AbstractUnsafe rather than transport implementations.
                 if (e.getStackTrace().length > 0) {
                     assertThat(
-                            e.getStackTrace()[0].getClassName(), is(AbstractChannel.class.getName() +
-                                    "$AbstractUnsafe"));
+                            e.getStackTrace()[0].getClassName(), is(AbstractChannel.class.getName()));
                     e.printStackTrace();
                 }
             }

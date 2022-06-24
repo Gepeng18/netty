@@ -18,8 +18,8 @@ package io.netty5.channel.local;
 import io.netty5.channel.Channel;
 import io.netty5.util.concurrent.Promise;
 
-interface LocalChannelUnsafe extends Channel.Unsafe {
-    void register0();
-    void deregister0();
-    Promise<Void> newPromise();
+interface LocalChannelUnsafe {
+    void registerNow();
+    void deregisterNow();
+    void closeNow();
 }
